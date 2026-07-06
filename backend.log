@@ -1,0 +1,135 @@
+INFO:     Will watch for changes in these directories: ['d:\\Alchemist\\alchemist-platform\\backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [22860] using StatReload
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "C:\Users\sriva\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Users\sriva\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\Alchemist\alchemist-platform\backend\venv\Lib\site-packages\uvicorn\_subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+  File "D:\Alchemist\alchemist-platform\backend\venv\Lib\site-packages\uvicorn\server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sriva\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\sriva\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sriva\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "D:\Alchemist\alchemist-platform\backend\venv\Lib\site-packages\uvicorn\server.py", line 68, in serve
+    config.load()
+  File "D:\Alchemist\alchemist-platform\backend\venv\Lib\site-packages\uvicorn\config.py", line 467, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Alchemist\alchemist-platform\backend\venv\Lib\site-packages\uvicorn\importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sriva\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "d:\Alchemist\alchemist-platform\backend\app\main.py", line 7, in <module>
+    from app.api.v1 import auth, learning, admin, chat, content
+  File "d:\Alchemist\alchemist-platform\backend\app\api\v1\learning.py", line 9, in <module>
+    from app.services.ai_service import ai_service
+  File "d:\Alchemist\alchemist-platform\backend\app\services\ai_service.py", line 6, in <module>
+    from google import genai as google_genai
+ImportError: cannot import name 'genai' from 'google' (unknown location)
+WARNING:  StatReload detected changes in 'app\api\v1\learning.py'. Reloading...
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "C:\Users\sriva\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Users\sriva\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\Alchemist\alchemist-platform\backend\venv\Lib\site-packages\uvicorn\_subprocess.py", line 76, in subprocess_started
+    target(sockets=sockets)
+  File "D:\Alchemist\alchemist-platform\backend\venv\Lib\site-packages\uvicorn\server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sriva\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\sriva\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sriva\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "D:\Alchemist\alchemist-platform\backend\venv\Lib\site-packages\uvicorn\server.py", line 68, in serve
+    config.load()
+  File "D:\Alchemist\alchemist-platform\backend\venv\Lib\site-packages\uvicorn\config.py", line 467, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Alchemist\alchemist-platform\backend\venv\Lib\site-packages\uvicorn\importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sriva\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "d:\Alchemist\alchemist-platform\backend\app\main.py", line 7, in <module>
+    from app.api.v1 import auth, learning, admin, chat, content
+  File "d:\Alchemist\alchemist-platform\backend\app\api\v1\learning.py", line 9, in <module>
+    from app.services.ai_service import ai_service
+  File "d:\Alchemist\alchemist-platform\backend\app\services\ai_service.py", line 6, in <module>
+    from google import genai as google_genai
+ImportError: cannot import name 'genai' from 'google' (unknown location)
+WARNING:  StatReload detected changes in 'app\core\database.py'. Reloading...
+INFO:     Started server process [2012]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'app\core\database.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2012]
+OpenAI client initialized
+Gemini SDK not available; skipping Gemini initialization
+INFO:     Started server process [10864]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'app\models\__init__.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10864]
+OpenAI client initialized
+Gemini SDK not available; skipping Gemini initialization
+INFO:     Started server process [14384]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+OpenAI client initialized
+Gemini SDK not available; skipping Gemini initialization
+INFO:     127.0.0.1:54538 - "GET /api/v1/learning/notifications HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58352 - "GET /api/v1/admin/engagement-metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61977 - "GET /api/v1/admin/live-users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54538 - "GET /api/v1/admin/top-users?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64170 - "GET /api/v1/admin/analytics?period=week HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51340 - "GET /api/v1/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58352 - "GET /api/v1/admin/top-courses?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61977 - "GET /api/v1/admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50060 - "GET /api/v1/admin/activities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54519 - "OPTIONS /auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50960 - "POST /auth/register HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63860 - "POST /auth/register HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63860 - "POST /auth/register HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59316 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59316 - "POST /auth/login HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59316 - "POST /auth/login HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59316 - "POST /auth/login HTTP/1.1" 404 Not Found

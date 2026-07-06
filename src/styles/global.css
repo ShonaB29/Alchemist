@@ -1,0 +1,306 @@
+:root {
+  --primary: #B4D6D3;
+  --secondary: #F9D6C5;
+  --accent-lavender: #E2C2E0;
+  --accent-vanilla: #FFF2CC;
+  --background: #FAF7F0;
+  --text: #4A4A4A;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.accent-font {
+  font-family: 'Satisfy', cursive;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-size: 2.5rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #9fc4c1;
+  border-color: #9fc4c1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(180, 214, 211, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #f7c4b0;
+  border-color: #f7c4b0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 214, 197, 0.4);
+}
+
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  background-color: var(--white);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.navbar-scrolled {
+  background-color: var(--white) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(180, 214, 211, 0.25);
+}
+
+.text-primary-custom {
+  color: var(--primary);
+}
+
+.bg-primary-custom {
+  background-color: var(--primary);
+}
+
+.bg-secondary-custom {
+  background-color: var(--secondary);
+}
+
+.bg-lavender {
+  background-color: var(--accent-lavender);
+}
+
+.typing-indicator span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--text);
+  margin: 0 2px;
+  animation: typing 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-10px); }
+}
+
+/* Chat-specific styles */
+.chat-message-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.chat-message-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.chat-bubble-user {
+  background-color: #F9D6C5 !important;
+  border-radius: 18px 18px 4px 18px !important;
+}
+
+.chat-bubble-mentor {
+  background-color: #B4D6D3 !important;
+  border-radius: 18px 18px 18px 4px !important;
+}
+
+.chat-input-area {
+  background: linear-gradient(to top, white 80%, rgba(255,255,255,0.95));
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.chat-voice-active {
+  animation: pulse 1s infinite;
+}
+
+.mentor-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #B4D6D3 0%, #9fc4c1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F9D6C5 0%, #f7c4b0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+.suggestion-chip {
+  background-color: rgba(180, 214, 211, 0.2);
+  border: 1px solid var(--primary);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.suggestion-chip:hover {
+  background-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.conversation-item {
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.conversation-item:hover {
+  background-color: rgba(180, 214, 211, 0.1);
+  border-left-color: var(--primary);
+}
+
+.conversation-item.active {
+  background-color: rgba(180, 214, 211, 0.2);
+  border-left-color: var(--primary);
+}
+
+.mode-selector {
+  position: absolute;
+  z-index: 100;
+  min-width: 200px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.star-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.star-menu-btn {
+  padding: 12px 16px;
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-menu-btn:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(180, 214, 211, 0.4);
+}
+
+.summary-card {
+  background: linear-gradient(135deg, #FFF2CC 0%, #faf7f0 100%);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.course-score-chip {
+  min-width: 92px;
+  padding: 12px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(180, 214, 211, 0.35), rgba(249, 214, 197, 0.55));
+  text-align: center;
+}
+
+/* Responsive chat styles */
+@media (max-width: 768px) {
+  .chat-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 80%;
+    z-index: 1000;
+    background: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .chat-sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .star-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
